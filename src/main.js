@@ -10,3 +10,10 @@ k.loadSprite("sonic", "graphics/sonic.png", {
         jump: { from: 8, to: 15, loop: true, speed: 100 },
     },
 });
+k.loadSprite("ring", "graphics/ring.png", {
+    sliceX: 16,
+    sliceY: 1,
+    anims: {
+        spin: { from: 0, to: 15, loop: true, speed: 30 },
+    },
+})

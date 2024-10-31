@@ -23,6 +23,12 @@ export default function mainMenu() {
         k.anchor("center")
     ]);
 
+    k.add([
+        k.text("Press Space/Click/Touch to Play", { font: "mania", size: 32 }),
+        k.anchor("center"),
+        k.pos(k.center().x, k.center().y - 200),
+    ])
+
     makeSonic(k.vec2(200, 745));
 
     k.onUpdate(() => {

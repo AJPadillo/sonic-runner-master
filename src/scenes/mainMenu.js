@@ -18,8 +18,10 @@ export default function mainMenu() {
     ];
 
     k.add([
-        k.text("SONIC RING RUN", { font: "mania", size: 32 })
-    ])
+        k.text("SONIC RING RUN", { font: "mania", size: 96 }),
+        k.pos(k.center().x, 200),
+        k.anchor("center")
+    ]);
 
     makeSonic(k.vec2(200, 745));
 

@@ -17,6 +17,10 @@ export default function mainMenu() {
         k.add([k.sprite("platforms"), k.pos(platformWidth * 4, 450), k.scale(4)]),
     ];
 
+    k.add([
+        k.text("SONIC RING RUN", { font: "mania", size: 32 })
+    ])
+
     makeSonic(k.vec2(200, 745));
 
     k.onUpdate(() => {

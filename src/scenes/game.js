@@ -25,6 +25,14 @@ export default function game() {
         gameSpeed += 50;
     });
 
+    k.add([
+        k.rect(1920, 300),
+        k.opacity(0),
+        k.area(),
+        k.pos(0, 832),
+        k.body({ isStatic: true })
+    ]);
+
     k.onUpdate(() => {
         if (bgPieces[1].pos.x < 0) {
             bgPieces[0].moveTo(bgPieces[1].pos.x + bgPieceWidth * 2, 0);

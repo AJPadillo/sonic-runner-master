@@ -20,5 +20,10 @@ export default function game() {
         k.add([k.sprite("platforms"), k.pos(platformWidth, 450), k.scale(4)])
     ];
 
+    let gameSpeed = 300;
+    k.loop(1, () => {
+        gameSpeed += 50;
+    });
+
     
 }

@@ -1,4 +1,5 @@
 import k from "../kaplayCtx";
+import { makeSonic } from "../entities/sonic";
 
 export default function game() {
     k.setGravity(3100);
@@ -19,6 +20,8 @@ export default function game() {
         k.add([k.sprite("platforms"), k.pos(0, 450), k.scale(4)]),
         k.add([k.sprite("platforms"), k.pos(platformWidth, 450), k.scale(4)])
     ];
+
+    const sonic = makeSonic(k.vec2(200, 745));
 
     let gameSpeed = 300;
     k.loop(1, () => {

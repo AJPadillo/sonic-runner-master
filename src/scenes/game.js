@@ -25,6 +25,19 @@ export default function game() {
     const sonic = makeSonic(k.vec2(200, 745));
     sonic.setControls();
     sonic.setEvents();
+    sonic.onCollide("enemy", (enemy) => {
+        if (!sonic.isGrounded()) {
+            k.play("destroy", { volume: 0.5 });
+            k.play("hyper-ring", { volume: 0.5 });
+            k.destroy(enemy);
+            sonic.play("jump");
+            sonic.jump();
+            //TODO
+            return;
+        }
+        k.play("hurt", {volume: 0.5});
+        //TODO
+    })
 
     let gameSpeed = 300;
     k.loop(1, () => {
@@ -42,12 +55,13 @@ export default function game() {
         });
 
         motobug.onExitScreen(() => {
-            if(motobug.pos.x < 0) k.destroy(motobug);
+            if (motobug.pos.x < 0) k.destroy(motobug);
         });
-        
+
         const waitTime = k.rand(0.5, 2.5);
         k.wait(waitTime, spawnMotoBug);
     };
+    spawnMotoBug();
 
     k.add([
         k.rect(1920, 300),

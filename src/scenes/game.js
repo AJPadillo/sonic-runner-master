@@ -37,6 +37,7 @@ export default function game() {
         }
         k.play("hurt", {volume: 0.5});
         //TODO
+        k.go("gameover");
     })
 
     let gameSpeed = 300;

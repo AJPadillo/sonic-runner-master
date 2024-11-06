@@ -40,6 +40,9 @@ export default function game() {
             }
             motobug.move(-gameSpeed, 0);
         });
+        motobug.onExitScreen(() => {
+            if(motobug.pos.x < 0) k.destroy(motobug);
+        });
         
     };
 

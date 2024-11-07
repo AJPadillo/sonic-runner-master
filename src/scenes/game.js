@@ -26,6 +26,11 @@ export default function game() {
     let score = 0;
     let scoreMultiplier = 0;
 
+    const scoreText = k.add([
+        k.text("SCORE : 0", { font: "mania", size: 72 }),
+        k.pos(20, 20),
+    ])
+
     const sonic = makeSonic(k.vec2(200, 745));
     sonic.setControls();
     sonic.setEvents();

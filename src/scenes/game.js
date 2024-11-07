@@ -29,7 +29,7 @@ export default function game() {
     const scoreText = k.add([
         k.text("SCORE : 0", { font: "mania", size: 72 }),
         k.pos(20, 20),
-    ])
+    ]);
 
     const sonic = makeSonic(k.vec2(200, 745));
     sonic.setControls();
@@ -53,7 +53,7 @@ export default function game() {
         k.play("ring", { volume: 0.5 });
         k.destroy(ring);
         score++;
-        //TODO
+        scoreText.text = `SCORE : ${score}`;
     });
 
     let gameSpeed = 300;

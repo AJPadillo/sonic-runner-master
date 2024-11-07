@@ -39,7 +39,13 @@ export default function game() {
         k.play("hurt", { volume: 0.5 });
         //TODO
         k.go("gameover");
-    })
+    });
+
+    sonic.onCollide("ring", (ring) => {
+        k.play("ring", { volume: 0.5 });
+        k.destroy(ring);
+        
+    });
 
     let gameSpeed = 300;
     k.loop(1, () => {
@@ -78,6 +84,7 @@ export default function game() {
         const waitTime = k.rand(0.5, 3);
         k.wait(waitTime, spawnRing);
     };
+    spawnRing();
 
     k.add([
         k.rect(1920, 300),

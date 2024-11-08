@@ -46,6 +46,9 @@ export default function game() {
             scoreText.text = `SCORE : ${score}`;
             if (scoreMultiplier === 1) sonic.ringColletUI.text = "+10";
             if (scoreMultiplier > 1) sonic.ringColletUI.text = `x${scoreMultiplier}`;
+            k.wait(1, () => {
+                sonic.ringColletUI.text = "";
+            });
             return;
         }
         k.play("hurt", { volume: 0.5 });

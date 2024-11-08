@@ -56,6 +56,8 @@ export default function game() {
         k.destroy(ring);
         score++;
         scoreText.text = `SCORE : ${score}`;
+        sonic.ringColletUI.text = "+1";
+        k.wait(1, () => (sonic.ringColletUI = ""));
     });
 
     let gameSpeed = 300;

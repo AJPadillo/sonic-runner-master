@@ -41,7 +41,9 @@ export default function game() {
             k.destroy(enemy);
             sonic.play("jump");
             sonic.jump();
-            //TODO
+            scoreMultiplier += 1;
+            score += 10 * scoreMultiplier;
+            scoreText.text = `SCORE : ${score}`;
             return;
         }
         k.play("hurt", { volume: 0.5 });

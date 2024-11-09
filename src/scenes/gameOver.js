@@ -15,9 +15,15 @@ export default function gameOver(citySfx) {
         if (rankValues[i] < currentScore) {
             currentRank = rankGrades[i];
         }
-        
+
         if (rankValues[i] < bestScore) {
             bestRank = rankGrades[i];
         }
+    }
+
+    if (bestScore < currentScore) {
+        k.setData("best-score", currentScore);
+        bestScore = currentScore;
+        bestRank = currentRank;
     }
 }

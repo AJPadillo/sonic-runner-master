@@ -6,7 +6,7 @@ export default function gameOver(citySfx) {
     const currentScore = k.getData("current-score");
 
     const rankGrades = ["F", "E", "D", "C", "B", "A", "S"];
-    const rankValues = [50, 280, 500, 720, 980, 1200, 1780];
+    const rankValues = [50, 80, 120, 150, 200, 230, 300];
 
     let currentRank = "F";
     let bestRank = "F";

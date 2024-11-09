@@ -26,4 +26,11 @@ export default function gameOver(citySfx) {
         bestScore = currentScore;
         bestRank = currentRank;
     }
+
+    k.add([
+        k.text("GAME OVER", { font: "mania", size: 96 }),
+        k.anchor("center"),
+        k.pos(k.center().x, k.center().y - 300)
+    ]);
+    
 }

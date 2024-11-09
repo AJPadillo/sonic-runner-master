@@ -32,5 +32,12 @@ export default function gameOver(citySfx) {
         k.anchor("center"),
         k.pos(k.center().x, k.center().y - 300)
     ]);
-    
+    k.add([
+        k.text(`BEST SCORE : ${bestScore}`, {
+            font : "mania",
+            size: 64,
+        }),
+        k.anchor("center"),
+        k.pos(k.center().x - 400, k.center().y - 200)
+    ]);
 }

@@ -35,7 +35,7 @@ export default function gameOver(citySfx) {
     k.add([
         k.text(`BEST SCORE : ${bestScore}`, {
             font: "mania",
-            size: 64,
+            size: 64
         }),
         k.anchor("center"),
         k.pos(k.center().x - 400, k.center().y - 200)
@@ -59,6 +59,20 @@ export default function gameOver(citySfx) {
     ]);
 
     bestRankBox.add([
+        k.text(bestRank, { font: "mania", size: 100 }),
+        k.anchor("center")
+    ]);
+
+    const currentRankBox = k.add([
+        k.rect(400, 400, { radius: 4 }),
+        k.color(0, 0, 0),
+        k.area(),
+        k.anchor("center"),
+        k.outline(6, k.Color.fromArray([255, 255, 255])),
+        k.pos(k.center().x + 400, k.center().y + 50)
+    ]);
+
+    currentRankBox.add([
         k.text(bestRank, { font: "mania", size: 100 }),
         k.anchor("center")
     ]);

@@ -76,4 +76,16 @@ export default function gameOver(citySfx) {
         k.text(bestRank, { font: "mania", size: 100 }),
         k.anchor("center")
     ]);
+
+    k.wait(1, () => {
+        k.add([
+            k.text("Press Space/Click/Touch to Play Again", {
+                font: "mania",
+                size: 64
+            }),
+            k.anchor("center"),
+            k.pos(k.center().x, k.center().y + 350)
+        ]);
+        k.onButtonPress("jump", () => k.go("game"));
+    });
 }

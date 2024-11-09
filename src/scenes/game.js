@@ -34,6 +34,7 @@ export default function game() {
     const sonic = makeSonic(k.vec2(200, 745));
     sonic.setControls();
     sonic.setEvents();
+
     sonic.onCollide("enemy", (enemy) => {
         if (!sonic.isGrounded()) {
             k.play("destroy", { volume: 0.5 });
@@ -51,8 +52,9 @@ export default function game() {
             });
             return;
         }
+
         k.play("hurt", { volume: 0.5 });
-        //TODO
+        k.setData("current-score", score);
         k.go("gameover");
     });
 

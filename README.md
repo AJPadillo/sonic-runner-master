@@ -1,10 +1,13 @@
 # Sonic Themed Infinite Runner Game
 
-Live demo : https://jslegend.itch.io/sonic-ring-run
+Live demo : https://ajpadillo.github.io/sonic-runner-master/
 
 Made in JavaScript with the Kaplay game library.
 
-Check out my channel to learn how to make games in JS : https://youtube.com/@jslegenddev
+
+## Acknowledgments
+
+This project was learned through [freeCodeCamp.org](https://www.freecodecamp.org). I would like to thank freeCodeCamp for providing free and high-quality educational resources.
 
 
 CREDITS
